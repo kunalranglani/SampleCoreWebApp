@@ -3,3 +3,7 @@
 ################################################################################
 
 /SampleCoreWebApp/.vs/SampleCoreWebApp/v16/Server/sqlite3
+*.suo
+/SampleCoreWebApp/SampleCoreWebApp/obj
+/SampleCoreWebApp/SampleCoreWebApp/bin/Debug/netcoreapp3.0
+/SampleCoreWebApp/SampleCoreWebApp/bin/Debug/netcoreapp2.1
