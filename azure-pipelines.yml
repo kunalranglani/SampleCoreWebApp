@@ -8,6 +8,7 @@ variables:
   buildConfiguration: 'Release'
   azureSubscription: 'SampleCoreWebApp'
   webAppName: 'SampleCoreWebApp2'
+  solution: '**/*.sln'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
@@ -17,7 +18,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '$(solution) --configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
 
 - task: AzureRmWebAppDeployment@4
