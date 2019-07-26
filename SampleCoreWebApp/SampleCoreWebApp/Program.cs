@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace SampleCoreWebApp
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args).UseApplicationInsights("11a4ba6b-ddb0-48b2-bb18-1aed96d1b8ce")
+            WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
 }
