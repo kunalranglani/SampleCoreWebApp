@@ -3,10 +3,14 @@ name: ASP.NET Core CI
 on: [push]
 
 jobs:
-  build:
-
+  npm:
     runs-on: ubuntu-latest
-    
+    steps:
+      - name: Install dependencies
+        run: npm install
+      
+  build:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
